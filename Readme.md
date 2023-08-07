@@ -23,10 +23,11 @@
     - [Либа для взаимодействия с бд на го](https://go.dev/doc/tutorial/database-access)
   - [Redis](https://habr.com/ru/companies/wunderfund/articles/685894/)
     - Когда использовать, зачем и т.д. Очень советую пописать свои клиенты для редиса. 
-- DevOps
+- DevOps and utils
   - [Docker](https://www.youtube.com/watch?v=n9uCgUzfeRQ&ab_channel=%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BB%D0%B5%D0%BD%D0%9C%D0%B8%D0%BD%D0%B8%D0%BD)
     - [Docker compose/swarm](https://habr.com/ru/companies/ruvds/articles/450312/)
   - [CI/CD](https://habr.com/ru/articles/476368/)
+  - [Makefile](https://habr.com/ru/articles/461467/)
 
   
 После того как освоишь этот материал тебе нужно будет сделать следующие задания:
