@@ -1,0 +1,71 @@
+basePath: /
+definitions:
+  domain.BaseResponse:
+    properties:
+      error:
+        type: string
+      status:
+        type: boolean
+    type: object
+  domain.Element:
+    properties:
+      count:
+        type: integer
+      tag-name:
+        type: string
+    type: object
+  domain.Meta:
+    properties:
+      content-length:
+        type: integer
+      content-type:
+        type: string
+      status:
+        type: integer
+    type: object
+  domain.Response:
+    properties:
+      elements:
+        items:
+          $ref: '#/definitions/domain.Element'
+        type: array
+      meta:
+        $ref: '#/definitions/domain.Meta'
+      url:
+        type: string
+    type: object
+info:
+  contact: {}
+  description: API server for application
+  title: WalkUrls API
+  version: 1.0.0
+paths:
+  /walk:
+    post:
+      consumes:
+      - application/json
+      description: Add containers to account
+      parameters:
+      - description: info
+        in: body
+        name: input
+        required: true
+        schema:
+          items:
+            type: string
+          type: array
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/domain.Response'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/domain.BaseResponse'
+      summary: Walk all urls and get data for every url
+      tags:
+      - User
+swagger: "2.0"
